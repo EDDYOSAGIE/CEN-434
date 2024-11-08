@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination </title>
+</head>
+<style>
+    body{
+        background-color: beige;
+    }
+</style>
+<script type="text/javascript">
+    function factorial(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        } else {
+            let result = 1;
+            for (let i = 2; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+    }
+    function combination(x,y){
+        let result = 0;
+        if(x>y){
+            result = factorial(x)/(factorial(x-y)*factorial(y));
+        }
+        else if(x<y){
+            result = factorial(y)/(factorial(y-x)*factorial(x));
+            
+        }
+        else{
+            result = factorial(x-1)/(factorial(x-1-y)*factorial(y));
+        }
+        concole.log(result)
+        }
+    
+</script>
+<body>
+    
+</body>
+</html>
